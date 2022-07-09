@@ -16,13 +16,22 @@ puts "Tentativa 1"
 puts "Entre com o numero"
 chute = gets
 
+puts "\n\n"
+
 puts "Será que acertou? Seu chute foi: " + chute
+
+puts "\n\n"
 
 acertou = numero_secreto == chute.to_i 
 
 if acertou
     puts "Boa, vc acertou!" 
 else
-    puts "Ops, não foi dessa vez! O numero secreto era " + numero_secreto.to_s
+    maior = numero_secreto > chute.to_i 
+    if maior
+        puts "O número secreto é maior!"
+    else
+        puts "O número secreto é menor!"
+    end
 end
 
