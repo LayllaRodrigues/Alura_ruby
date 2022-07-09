@@ -18,8 +18,10 @@ chute = gets
 
 puts "Será que acertou? Seu chute foi: " + chute
 
-if numero_secreto == chute.to_i
-    puts "Boa, vc acertou!"
+acertou = numero_secreto == chute.to_i 
+
+if acertou
+    puts "Boa, vc acertou!" 
 else
     puts "Ops, não foi dessa vez! O numero secreto era " + numero_secreto.to_s
 end
