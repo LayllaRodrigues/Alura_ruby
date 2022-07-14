@@ -14,31 +14,41 @@ def sorteia_numero_secreto
     numero_sorteado
 end
 
-da_boas_vindas
-numero_secreto = sorteia_numero_secreto
-
-
-limite_de_tentativas = 5
-
-for tentativa in 1..limite_de_tentativas
+def pede_um_numero(tentativa, limite_de_tentativas)
     puts "\n\n\n"
     puts "Tentativa " + tentativa.to_s + " de " + limite_de_tentativas.to_s
     puts "Entre com o numero"
     chute = gets
-
     puts "Será que acertou? Seu chute foi: " + chute
+    chute.to_i
+end
 
-    acertou = numero_secreto == chute.to_i 
-
+def verifica_se_acertou(numero_secreto, chute)
+    acertou = numero_secreto == chute
     if acertou
         puts "Boa, vc acertou!" 
-        break
+        return true
+        
     else
-        maior = numero_secreto > chute.to_i 
+        maior = numero_secreto > chute
         if maior
             puts "O número secreto é maior!"
+            return false
         else
             puts "O número secreto é menor!"
+            return false
         end
+    end
+end
+
+da_boas_vindas
+numero_secreto = sorteia_numero_secreto
+
+limite_de_tentativas = 5
+
+for tentativa in 1..limite_de_tentativas
+    chute = pede_um_numero(tentativa,limite_de_tentativas)
+    if verifica_se_acertou(numero_secreto, chute)
+        break
     end
 end
