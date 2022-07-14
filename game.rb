@@ -14,7 +14,7 @@ limite_de_tentativas = 5
 
 for tentativa in 1..limite_de_tentativas
     puts "\n\n\n"
-    puts "Tentativa " + tentativa.to_s + limite_de_tentativas
+    puts "Tentativa " + tentativa.to_s + limite_de_tentativas.to_s
     puts "Entre com o numero"
     chute = gets
 
