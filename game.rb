@@ -14,7 +14,7 @@ limite_de_tentativas = 5
 
 for tentativa in 1..limite_de_tentativas
     puts "\n\n\n"
-    puts "Tentativa " + tentativa.to_s + limite_de_tentativas.to_s
+    puts "Tentativa " + tentativa.to_s + " de " + limite_de_tentativas.to_s
     puts "Entre com o numero"
     chute = gets
 
@@ -24,6 +24,7 @@ for tentativa in 1..limite_de_tentativas
 
     if acertou
         puts "Boa, vc acertou!" 
+        break
     else
         maior = numero_secreto > chute.to_i 
         if maior
