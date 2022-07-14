@@ -6,12 +6,12 @@ def da_boas_vindas
     puts " Começaremos o jogo para você, " + nome 
 end
 
-# def sorteia_numero_secreto
-#     puts "\n\n\n"
-#     puts "Escolhendo um numero entre 0 e 200 ..."
-#     @numero_secreto = rand 0..200
-#     puts "Escolhido... agora tente adivinhar!"
-# end
+def sorteia_numero_secreto
+    puts "\n\n\n"
+    puts "Escolhendo um numero entre 0 e 200 ..."
+    @numero_secreto = rand 0..200
+    puts "Escolhido... agora tente adivinhar!"
+end
 
 da_boas_vindas
 sorteia_numero_secreto
