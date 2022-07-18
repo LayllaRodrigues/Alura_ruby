@@ -43,6 +43,7 @@ end
 da_boas_vindas
 numero_secreto = sorteia_numero_secreto
 
+pontos_ate_agora = 1000
 limite_de_tentativas = 5
 chutes = []
 
@@ -51,9 +52,13 @@ for tentativa in 1..limite_de_tentativas
     chute = pede_um_numero(chutes,tentativa,limite_de_tentativas)
     chutes << chute # Coloca o elemento dentro do array
 
+    pontos_a_perder = (chute - numero_secreto) / 2
+    pontos_ate_agora -= pontos_a_perder
+
     if verifica_se_acertou(numero_secreto, chute)
         break
     end
 end
 
+puts "Você ganhou #{pontos_ate_agora} pontos."
 
