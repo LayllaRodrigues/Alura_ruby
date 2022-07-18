@@ -6,6 +6,8 @@ def da_boas_vindas
     puts " Começaremos o jogo para você, #{nome}"
 end
 
+
+
 def sorteia_numero_secreto
     puts "\n\n\n"
     puts "Escolhendo um numero entre 0 e 200 ..."
