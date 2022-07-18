@@ -52,7 +52,7 @@ for tentativa in 1..limite_de_tentativas
     chute = pede_um_numero(chutes,tentativa,limite_de_tentativas)
     chutes << chute # Coloca o elemento dentro do array
 
-    pontos_a_perder = (chute - numero_secreto) / 2.0
+    pontos_a_perder = (chute - numero_secreto).abs / 2.0  #abs é o metodo ruby que retorna apenas os numeros absolutos, isso é, sem os sinais, permitindo simplificar 
     pontos_ate_agora -= pontos_a_perder
 
     if verifica_se_acertou(numero_secreto, chute)
