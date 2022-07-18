@@ -1,8 +1,8 @@
 chute = []
 
-chute [0] = 50
-chute [1] = 150
-chute [2] = 300
+chute << 50
+chute << 150
+chute << 300
 
 tentativas = 3 
 
