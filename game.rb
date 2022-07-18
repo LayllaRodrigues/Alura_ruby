@@ -4,6 +4,7 @@ def da_boas_vindas
     nome = gets.strip
     puts "\n\n\n"
     puts " Começaremos o jogo para você, #{nome}"
+    nome
 end
 
 def pede_dificuldade
@@ -55,7 +56,7 @@ def verifica_se_acertou(numero_secreto, chute)
     false
 end
 
-da_boas_vindas
+nome = da_boas_vindas
 dificuldade = pede_dificuldade
 numero_secreto = sorteia_numero_secreto dificuldade
 
@@ -67,6 +68,11 @@ for tentativa in 1..limite_de_tentativas
 
     chute = pede_um_numero(chutes,tentativa,limite_de_tentativas)
     chutes << chute # Coloca o elemento dentro do array
+
+    if nome == "Laylla"
+        puts "Boa, vc acertou!" 
+        break
+    end
 
     pontos_a_perder = (chute - numero_secreto).abs / 2.0  #abs é o metodo ruby que retorna apenas os numeros absolutos, isso é, sem os sinais, permitindo simplificar 
     pontos_ate_agora -= pontos_a_perder
