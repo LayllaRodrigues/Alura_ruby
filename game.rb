@@ -9,7 +9,7 @@ end
 def sorteia_numero_secreto
     puts "\n\n\n"
     puts "Escolhendo um numero entre 0 e 200 ..."
-    numero_sorteado = rand 0..200
+    numero_sorteado = rand(200)
     puts "Escolhido... agora tente adivinhar!"
     numero_sorteado
 end
