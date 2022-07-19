@@ -1,6 +1,6 @@
 alura
 programador
-qualidade 
+qualidade
 software
 devops
 engenharia
