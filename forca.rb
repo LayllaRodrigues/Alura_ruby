@@ -30,7 +30,7 @@ def pede_um_chute(chutes, erros)
   chute
 end
 
-def joga(_nome)
+def joga(nome)
   palavra_secreta = escolhe_palavra_secreta
   erros = 0
   chutes = []
@@ -38,6 +38,10 @@ def joga(_nome)
 
   while erros < 5
     chute = pede_um_chute chutes, erros
+    if chutes.include? chute
+      puts "Você já chutou #{chute}"
+      next
+    end
     chutes << chute
 
     chutou_uma_letra = chute.size == 1
