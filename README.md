@@ -6,28 +6,14 @@
 
 
 ```
-Entrada, saída, Strings e números inteiros Ver 
+- Entrada, saída, Strings e números inteiros Ver 
+- Condicionais, laços, programação imperativa.
+- O poder da extração de código
+- Arrays, métodos e funções.
+- Operações matemáticas, sistemas decimais e hexadecimais
+- Case when, while , loop do
 ```
 
-```
-Condicionais, laços, programação imperativa.
-```
-
-```
-O poder da extração de código
-```
-
-```
-Arrays, métodos e funções.
-```
-
-```
-Operações matemáticas, sistemas decimais e hexadecimais
-```
-
-```
-Case when, while , loop do
-```
 
 ### 🔨 Funcionalidades do projeto
 
