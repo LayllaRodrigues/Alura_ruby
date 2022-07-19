@@ -1,9 +1,5 @@
 require_relative 'ui' 
-
-def salva_rank(nome, pontos_totais)
-  conteudo = "#{nome}\n#{pontos_totais}"
-  File.write "rank.txt", conteudo
-end
+require_relative 'rank' 
 
 def escolhe_palavra_secreta
   avisa_escolhendo_palavra
@@ -98,10 +94,15 @@ def jogo_da_forca
   nome = boas_vindas
   pontos_totais = 0
 
+  avisa_campeao_atual ler_rank
+
   loop do
       pontos_totais += joga nome
       avisa_pontos_totais pontos_totais
-      salva_rank nome, pontos_totais
+
+      if ler_rank[1].to_i < pontos_totais
+        salva_rank nome, pontos_totais
+      end
       break if nao_quer_jogar?
   end
 end
