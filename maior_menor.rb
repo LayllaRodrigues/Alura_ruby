@@ -108,7 +108,7 @@ def ganhou
   puts "         OOOOOO         OOOOOO         "
   puts "             OOOOOOOOOOOO              "
   puts
-  puts "               Acertou, muito bom!                "
+  puts "         Acertou, muito bom!           "
   puts
 end
 
