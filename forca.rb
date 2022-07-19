@@ -9,7 +9,7 @@ end
 
 def escolhe_palavra_secreta
   puts 'Escolhendo uma palavra secreta ...'
-  palavra_secreta = "programador"
+  palavra_secreta = 'programador'
   puts "palavra secreta com #{palavra_secreta.size} letras... boa sorte!"
   palavra_secreta
 end
@@ -30,7 +30,17 @@ def pede_um_chute(chutes, erros)
   chute
 end
 
-def joga(nome)
+def conta(texto, letra)
+  total_encontrado = 0
+  for caractere in texto.chars
+        if texto[i] == letra
+            total_encontrado += 1 
+        end
+   end
+   total_encontrado
+end
+
+def joga(_nome)
   palavra_secreta = escolhe_palavra_secreta
   erros = 0
   chutes = []
@@ -42,28 +52,24 @@ def joga(nome)
 
     chutou_uma_letra = chute.size == 1
     if chutou_uma_letra
-        letra_procurada = chute[0]
-        total_encontrado = 0 
-        for i in 0..(palavra_secreta.size-1)
-            if palavra_secreta[i] == letra_procurada
-                total_encontrado += 1
-            end
-        end
-        if total_encontrado != 0 
-            puts "Letra encontrada #{total_encontrado} vezes. "
-        else
-            puts "Letra não encontrada. "
-            erros += 1 
-        end
+      letra_procurada = chute[0]
+      total_encontrado = conta palavra_secreta, letra_procurada
+      if total_encontrado == 0
+        puts 'Letra não encontrada.'
+        erros += 1
+
+      else
+        puts "Letra encontrada #{total_encontrado} vezes."
+      end
 
     else
       acertou = chute == palavra_secreta
       if acertou
-        puts "Parabéns! Acertou."
+        puts 'Parabéns! Acertou.'
         pontos_ate_agora += 100
         break
       else
-        puts "Que pena, errou!"
+        puts 'Que pena, errou!'
         pontos_ate_agora -= 30
         erros += 1
       end
@@ -79,4 +85,3 @@ loop do
   joga nome
   break if nao_quer_jogar?
 end
-
