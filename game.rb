@@ -90,6 +90,28 @@ def joga(nome, dificuldade)
   puts "Você ganhou #{pontos_ate_agora} pontos."
 end
 
+def ganhou
+  puts
+  puts "             OOOOOOOOOOO               "
+  puts "         OOOOOOOOOOOOOOOOOOO           "
+  puts "      OOOOOO  OOOOOOOOO  OOOOOO        "
+  puts "    OOOOOO      OOOOO      OOOOOO      "
+  puts "  OOOOOOOO  #   OOOOO  #   OOOOOOOO    "
+  puts " OOOOOOOOOO    OOOOOOO    OOOOOOOOOO   "
+  puts "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  "
+  puts "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  "
+  puts "OOOO  OOOOOOOOOOOOOOOOOOOOOOOOO  OOOO  "
+  puts " OOOO  OOOOOOOOOOOOOOOOOOOOOOO  OOOO   "
+  puts "  OOOO   OOOOOOOOOOOOOOOOOOOO  OOOO    "
+  puts "    OOOOO   OOOOOOOOOOOOOOO   OOOO     "
+  puts "      OOOOOO   OOOOOOOOO   OOOOOO      "
+  puts "         OOOOOO         OOOOOO         "
+  puts "             OOOOOOOOOOOO              "
+  puts
+  puts "               Acertou!                "
+  puts
+end
+
 def nao_quer_jogar?
   puts 'Deseja jogar novamente? (S/N)'
   quero_jogar = gets.strip
