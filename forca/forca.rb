@@ -3,7 +3,7 @@ require_relative 'ui'
 def pede_um_chute_valido(chutes, erros)
     cabecalho_de_tentativa chutes, erros
     loop do
-    chute = pede_um_chute chutes, erros
+    chute = pede_um_chute 
     if chutes.include? chute
       avisa_chute_efetuado chute
     else

@@ -21,11 +21,12 @@ def nao_quer_jogar?
 end
 
 def cabecalho_de_tentativa(chutes,erros)
+  puts "\n\n\n\n"
   puts "Erros até agora: #{erros}"
   puts "Chutes até agora: #{chutes}"
 end
 
-def pede_um_chute(chutes, erros)
+def pede_um_chute
   puts 'Entre com uma letra ou palavra'
   chute = gets.strip
   puts "Será que acertou? Você chutou: #{chute}"
