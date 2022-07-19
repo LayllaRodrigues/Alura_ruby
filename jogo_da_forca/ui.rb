@@ -56,6 +56,6 @@ end
 def avisa_escolhendo_palavra
   puts 'Escolhendo uma palavra secreta ...'
 end
-def avisa_tamanho_palavra(palavra_secreta)
+def avisa_palavra_escolhida(palavra_secreta)
   puts "palavra secreta com #{palavra_secreta.size} letras... boa sorte!"
 end

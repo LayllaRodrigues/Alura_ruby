@@ -6,8 +6,21 @@ def escolhe_palavra_secreta
   todas_as_palavras = texto.split "\n"
   numero_escolhido = rand(todas_as_palavras.size)
   palavra_secreta = todas_as_palavras[numero_escolhido].downcase
-  avisa_tamanho_palavra palavra_secreta
+  avisa_palavra_escolhida  palavra_secreta
   palavra_secreta
+end
+
+def escolhe_palavra_secreta_sem_consumir_muita_memoria
+  avisa_escolhendo_palavra
+  arquivo = File.new("dicionario.txt")
+  quantidade_de_palavras = arquivo.gets.to_i
+  numero_escolhido = rand(quantidade_de_palavras)
+  for linha in 1..(numero_escolhido-1)
+    arquivo.gets
+  end
+  palavra_secreta = arquivo.gets.strip.downcase
+  arquivo.close
+  avisa_palavra_escolhida  palavra_secreta
 end
 
 def palavra_mascarada(chutes, palavra_secreta)
