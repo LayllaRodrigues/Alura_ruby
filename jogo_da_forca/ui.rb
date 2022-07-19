@@ -7,12 +7,6 @@ def boas_vindas
     nome
 end
   
-def escolhe_palavra_secreta
-  puts 'Escolhendo uma palavra secreta ...'
-  palavra_secreta = 'programador'
-  puts "palavra secreta com #{palavra_secreta.size} letras... boa sorte!"
-  palavra_secreta
-end
   
 def nao_quer_jogar?
   puts 'Deseja jogar novamente (S/N?)'
@@ -59,3 +53,9 @@ def avisa_pontos(pontos_ate_agora)
   puts " Você ganhou #{pontos_ate_agora} pontos."
 end
 
+def avisa_escolhendo_palavra
+  puts 'Escolhendo uma palavra secreta ...'
+end
+def avisa_tamanho_palavra(palavra_secreta)
+  puts "palavra secreta com #{palavra_secreta.size} letras... boa sorte!"
+end
