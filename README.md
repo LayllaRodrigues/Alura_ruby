@@ -2,7 +2,7 @@
 
 ### Aulas - Ruby I: Lógica de programação com jogos :shipit:
 
-> Criação do game maior menor para introdução aos temas:
+> Criação de games para introdução aos temas:
 
 
 ```
