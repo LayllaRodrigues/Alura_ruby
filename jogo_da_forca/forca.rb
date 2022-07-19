@@ -37,7 +37,7 @@ def palavra_mascarada(chutes, palavra_secreta)
 end
 
 def pede_um_chute_valido(chutes, erros, mascara)
-    cabecalho_de_tentativa chutes, erros, mascara
+    cabecalho_de_tentativas chutes, erros, mascara
     loop do
     chute = pede_um_chute 
     if chutes.include? chute
