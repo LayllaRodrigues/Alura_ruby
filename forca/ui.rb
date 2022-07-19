@@ -19,11 +19,13 @@ def nao_quer_jogar?
   quero_jogar = gets.strip
   nao_quero_jogar = quero_jogar.upcase == 'N'
 end
-  
-def pede_um_chute(chutes, erros)
-  puts "\n\n\n"
+
+def cabecalho_de_tentativa(chutes,erros)
   puts "Erros até agora: #{erros}"
   puts "Chutes até agora: #{chutes}"
+end
+
+def pede_um_chute(chutes, erros)
   puts 'Entre com uma letra ou palavra'
   chute = gets.strip
   puts "Será que acertou? Você chutou: #{chute}"
