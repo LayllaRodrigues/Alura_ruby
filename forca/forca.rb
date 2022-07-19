@@ -1,3 +1,5 @@
+require_relative 'ui' 
+
 def joga(nome)
   palavra_secreta = escolhe_palavra_secreta
   erros = 0
@@ -17,28 +19,28 @@ def joga(nome)
       letra_procurada = chute[0]
       total_encontrado = palavra_secreta.count letra_procurada
       if total_encontrado == 0
-        puts 'Letra não encontrada.'
+        avisa_letra_não_encontrada 
         erros += 1
 
       else
-        puts "Letra encontrada #{total_encontrado} vezes."
+        avisa_letra_encontrada total_encontrado
       end
 
     else
       acertou = chute == palavra_secreta
       if acertou
-        puts 'Parabéns! Acertou.'
+        avisa_acertou_palavra
         pontos_ate_agora += 100
         break
       else
-        puts 'Que pena, errou!'
+        avisa_não_acertou_palavra
         pontos_ate_agora -= 30
         erros += 1
       end
     end
   end
 
-  puts " Você ganhou #{pontos_ate_agora} pontos."
+  avisa_pontos pontos_ate_agora
 end
 
 nome = boas_vindas
