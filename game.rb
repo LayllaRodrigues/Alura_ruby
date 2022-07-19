@@ -1,3 +1,4 @@
+
 def da_boas_vindas
   puts 'Bem vindo ao jogo da adivinhação'
   puts 'Qual é o seu nome?'
@@ -14,13 +15,13 @@ end
 
 def sorteia_numero_secreto(dificuldade)
   maximo = case dificuldade
-    when 1..2
-      30 * dificuldade
-    when 3..4
-      100 * dificuldade - 200
-    else
-      250
-    end
+           when 1..2
+             30 * dificuldade
+           when 3..4
+             100 * dificuldade - 200
+           else
+             250
+           end
 
   puts "\n\n\n"
   puts "Escolhendo um numero entre 1 e #{maximo}..."
@@ -71,8 +72,7 @@ def joga(nome, dificuldade)
       puts 'Boa, vc acertou!'
       break
     end
-    
-    pontos_a_perder = (chute - numero_secreto).abs / 2.0  # abs é o metodo ruby que retorna apenas os numeros absolutos, isso é, sem os sinais, permitindo simplificar
+    pontos_a_perder = (chute - numero_secreto).abs / 2.0  # abs retorna apenas numeros absolutos
     pontos_ate_agora -= pontos_a_perder
 
     break if verifica_se_acertou(numero_secreto, chute)
@@ -81,15 +81,19 @@ def joga(nome, dificuldade)
   puts "Você ganhou #{pontos_ate_agora} pontos."
 end
 
-def quer_jogar
-  puts "Deseja jogar novamente? (S/N)"
+def nao_quer_jogar?
+  puts 'Deseja jogar novamente? (S/N)'
   quero_jogar = gets.strip
-  quero_jogar.upcase == "S"
+  nao_quero_jogar = quero_jogar.upcase == 'N'
 end
 
 nome = da_boas_vindas
 dificuldade = pede_dificuldade
 
-while quer_jogar
-  joga nome, dificuldade
+loop do
+  joga nome, dificuldade 
+  if  nao_quer_jogar?
+    puts "Até mais *_*"
+    break
+  end
 end
