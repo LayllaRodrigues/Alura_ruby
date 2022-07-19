@@ -52,7 +52,7 @@ end
 def verifica_se_acertou(numero_secreto, chute)
   acertou = numero_secreto == chute
   if acertou
-    puts 'Boa, vc acertou!'
+    ganhou
     return true
   end
 
@@ -78,7 +78,7 @@ def joga(nome, dificuldade)
     chutes << chute # Coloca o elemento dentro do array
 
     if nome.capitalize == 'Laylla'
-      puts 'Boa, vc acertou!'
+      ganhou
       break
     end
     pontos_a_perder = (chute - numero_secreto).abs / 2.0  # abs retorna apenas numeros absolutos
@@ -108,7 +108,7 @@ def ganhou
   puts "         OOOOOO         OOOOOO         "
   puts "             OOOOOOOOOOOO              "
   puts
-  puts "               Acertou!                "
+  puts "               Acertou, muito bom!                "
   puts
 end
 
@@ -124,7 +124,25 @@ dificuldade = pede_dificuldade
 loop do
   joga nome, dificuldade 
   if  nao_quer_jogar?
-    puts "Até mais *_*"
+
+    puts "░░░░░░░░░░░░░░░░░░░░░░█████████"
+    puts "░░███████░░░░░░░░░░███▒▒▒▒▒▒▒▒███"
+    puts "░░█▒▒▒▒▒▒█░░░░░░░███▒▒▒▒▒▒▒▒▒▒▒▒▒███"
+    puts "░░░█▒▒▒▒▒▒█░░░░██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██"
+    puts "░░░░█▒▒▒▒▒█░░░██▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒███"
+    puts "░░░░░█▒▒▒█░░░█▒▒▒▒▒▒████▒▒▒▒████▒▒▒▒▒▒██"
+    puts "░░░█████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██"
+    puts "░░░█▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒██"
+    puts "░██▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██"
+    puts "██▒▒▒███████████▒▒▒▒▒██▒▒▒▒▒▒▒▒██▒▒▒▒▒██"
+    puts "█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒████████▒▒▒▒▒▒▒██"
+    puts "██▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██"
+    puts "░█▒▒▒███████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██"
+    puts "░██▒▒▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█"
+    puts "░░████████████░░░█████████████████"
+
+    puts "Bye bye!"
+
     break
   end
 end
