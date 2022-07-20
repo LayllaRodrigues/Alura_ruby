@@ -71,7 +71,6 @@ end
 def copia_mapa(mapa)
 	mapa.join("\n").tr("F", " ").split("\n")
 end
-
 def move_fantasmas(mapa)
 	caracter_do_fantasma = "F"
 	novo_mapa = copia_mapa mapa
@@ -87,7 +86,7 @@ def move_fantasmas(mapa)
 end
 
 def jogador_perdeu?(mapa)
-	encontra_jogador(mapa) == nil
+	!encontra_jogador(mapa)
 end
 
 def joga(nome)
