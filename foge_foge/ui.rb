@@ -9,7 +9,7 @@ end
 
 def pede_movimento
 	puts "Para onde deseja ir?"
-	movimento = gets.strip.upcase
+	movimento = gets.strip
 end
 
 def desenha(mapa)
