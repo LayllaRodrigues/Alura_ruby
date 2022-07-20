@@ -36,7 +36,6 @@ def posicao_valida?(mapa, posicao)
 	if valor_local == "X" || valor_local == "F"
 		return false
 	end
-
 	true
 end
 
