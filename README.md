@@ -29,7 +29,10 @@ S - para ir para baixo
 
 Use as bombas em seu caminho para ajuda-lo a livrar-se dos fantasmas!
 
+## 🛠️ Abrir e rodar o projeto
 
+** Para rodar o projeto, navegue até a pasta do jogo escolhido e digite em seu terminal o comando:
+$ ruby main.rb **
 
 
 	
